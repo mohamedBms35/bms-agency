@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMS Agency</title>
+
+    <title>BMS Agency | Digital Marketing & Performance</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -13,520 +15,690 @@
             font-family: Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: #0b0b0f;
             color: white;
         }
 
+        /* ================= HEADER ================= */
+
         header {
-            padding: 25px 8%;
+            width: 100%;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: #0b0b0f;
+            position: relative;
+            z-index: 10;
         }
 
         .logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
+            width: 130px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
+            font-size: 15px;
+            transition: 0.3s;
         }
 
-       .hero {
-    min-height: 82vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 70px 20px;
-    position: relative;
-    overflow: hidden;
-}
+        nav a:hover {
+            color: #9b5cff;
+        }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: #7c3aed;
-    opacity: 0.12;
-    filter: blur(120px);
-    border-radius: 50%;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
-.hero-content {
-    max-width: 900px;
-    position: relative;
-    z-index: 1;
-}
+        /* ================= HERO ================= */
 
-.hero-logo img {
-    width: 180px;
-    max-width: 70%;
-    height: auto;
-    margin-bottom: 25px;
-}
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 70px 20px;
+            position: relative;
+            overflow: hidden;
+        }
 
-.hero-tagline {
-    color: #9b5cff;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #7c3aed;
+            opacity: 0.12;
+            filter: blur(120px);
+            border-radius: 50%;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-.hero h1 {
-    font-size: 58px;
-    line-height: 1.1;
-    margin-bottom: 25px;
-}
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
 
-.hero h1 span {
-    color: #9b5cff;
-    display: block;
-}
+        .hero-logo img {
+            width: 180px;
+            max-width: 70%;
+            height: auto;
+            margin-bottom: 25px;
+        }
 
-.hero-description {
-    max-width: 700px;
-    margin: 0 auto 35px;
-    color: #aaa;
-    font-size: 18px;
-    line-height: 1.7;
-}
+        .hero-tagline {
+            color: #9b5cff;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
 
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #9b5cff;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .hero h1 span {
+            color: #9b5cff;
+            display: block;
+        }
 
-.btn:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
+        .hero-description {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            color: #aaa;
+            font-size: 18px;
+            line-height: 1.7;
+        }
 
-.btn-outline {
-    background: transparent;
-    border: 1px solid #9b5cff;
-}
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #9b5cff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #9b5cff;
+        }
+
+
+        /* ================= SERVICES ================= */
 
         .services {
-    padding: 100px 8%;
-    text-align: center;
-    background: #0f0f15;
-}
+            padding: 100px 8%;
+            text-align: center;
+            background: #0f0f15;
+        }
 
-.section-tag {
-    color: #9b5cff;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
-}
+        .section-tag {
+            color: #9b5cff;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
 
-.services h2 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
+        .services h2 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
 
-.services h2 span {
-    color: #9b5cff;
-}
+        .services h2 span {
+            color: #9b5cff;
+        }
 
-.section-description {
-    max-width: 650px;
-    margin: 0 auto 55px;
-    color: #999;
-    line-height: 1.7;
-}
+        .section-description {
+            max-width: 650px;
+            margin: 0 auto 55px;
+            color: #999;
+            line-height: 1.7;
+        }
 
-.cards {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        .cards {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.card {
-    width: 300px;
-    padding: 35px 30px;
-    text-align: left;
-    background: #15151d;
-    border: 1px solid #24242d;
-    border-radius: 15px;
-    transition: 0.3s;
-}
+        .card {
+            width: 300px;
+            padding: 35px 30px;
+            text-align: left;
+            background: #15151d;
+            border: 1px solid #24242d;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #9b5cff;
-}
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #9b5cff;
+        }
 
-.card-number {
-    color: #9b5cff;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
+        .card-number {
+            color: #9b5cff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
 
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
 
-.card p {
-    color: #999;
-    line-height: 1.7;
-}
+        .card p {
+            color: #999;
+            line-height: 1.7;
+        }
+
+
+        /* ================= WHY BMS ================= */
+
+        .why-bms {
+            padding: 110px 8%;
+            background: #0b0b0f;
+        }
+
+        .why-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .why-text {
+            flex: 1;
+        }
+
+        .why-text h2 {
+            font-size: 43px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .why-text h2 span {
+            color: #9b5cff;
+        }
+
+        .why-text > p:not(.section-tag) {
+            color: #999;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .why-cards {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .why-card {
+            padding: 28px;
+            background: #15151d;
+            border: 1px solid #24242d;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            border-color: #9b5cff;
+        }
+
+        .why-card span {
+            color: #9b5cff;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .why-card h3 {
+            margin: 15px 0 10px;
+            font-size: 20px;
+        }
+
+        .why-card p {
+            color: #888;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            padding: 100px 20px;
+            text-align: center;
+            background: #0f0f15;
+        }
+
+        .contact h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .contact h2 span {
+            color: #9b5cff;
+        }
+
+        .contact p {
+            color: #999;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+
+        /* ================= FOOTER ================= */
 
         footer {
             text-align: center;
             padding: 30px;
             color: #777;
             border-top: 1px solid #222;
+            background: #0b0b0f;
         }
-        @media (max-width: 600px) {
 
-    .hero {
-        min-height: 75vh;
-        padding: 50px 20px;
-    }
 
-    .hero-logo img {
-        width: 140px;
-    }
+        /* ================= MOBILE ================= */
 
-    .hero h1 {
-        font-size: 38px;
-    }
+        @media (max-width: 700px) {
 
-    .hero-description {
-        font-size: 16px;
-    }
+            header {
+                padding: 18px 20px;
+            }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
+            .logo img {
+                width: 110px;
+            }
 
-    .hero-buttons .btn {
-        width: 220px;
-    }
-}
-    @media (max-width: 600px) {
+            nav {
+                gap: 15px;
+            }
 
-    .services {
-        padding: 70px 20px;
-    }
+            nav a {
+                font-size: 13px;
+            }
 
-    .services h2 {
-        font-size: 32px;
-    }
+            .hero {
+                min-height: 75vh;
+                padding: 50px 20px;
+            }
 
-    .card {
-        width: 100%;
-    }
-}
-    .why-bms {
-    padding: 110px 8%;
-    background: #0b0b0f;
-}
+            .hero-logo img {
+                width: 140px;
+            }
 
-.why-content {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 70px;
-}
+            .hero h1 {
+                font-size: 38px;
+            }
 
-.why-text {
-    flex: 1;
-}
+            .hero-description {
+                font-size: 16px;
+            }
 
-.why-text h2 {
-    font-size: 43px;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
 
-.why-text h2 span {
-    color: #9b5cff;
-}
+            .hero-buttons .btn {
+                width: 220px;
+            }
 
-.why-text > p:not(.section-tag) {
-    color: #999;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
+            .services {
+                padding: 70px 20px;
+            }
 
-.why-cards {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-}
+            .services h2 {
+                font-size: 32px;
+            }
 
-.why-card {
-    padding: 28px;
-    background: #15151d;
-    border: 1px solid #24242d;
-    border-radius: 14px;
-    transition: 0.3s;
-}
+            .card {
+                width: 100%;
+            }
 
-.why-card:hover {
-    transform: translateY(-5px);
-    border-color: #9b5cff;
-}
+            .why-bms {
+                padding: 75px 20px;
+            }
 
-.why-card span {
-    color: #9b5cff;
-    font-weight: bold;
-    font-size: 13px;
-}
+            .why-content {
+                flex-direction: column;
+                gap: 45px;
+            }
 
-.why-card h3 {
-    margin: 15px 0 10px;
-    font-size: 20px;
-}
+            .why-text h2 {
+                font-size: 32px;
+            }
 
-.why-card p {
-    color: #888;
-    line-height: 1.6;
-    font-size: 14px;
-}
-    @media (max-width: 700px) {
+            .why-cards {
+                width: 100%;
+                grid-template-columns: 1fr;
+            }
 
-    .why-bms {
-        padding: 75px 20px;
-    }
+            .contact {
+                padding: 70px 20px;
+            }
 
-    .why-content {
-        flex-direction: column;
-        gap: 45px;
-    }
+            .contact h2 {
+                font-size: 32px;
+            }
+        }
 
-    .why-text h2 {
-        font-size: 32px;
-    }
-
-    .why-cards {
-        width: 100%;
-        grid-template-columns: 1fr;
-    }
-}
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-    <img src="logo.png" alt="BMS Agency">
-</div>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <!-- ================= HEADER ================= -->
 
-<section class="hero">
+    <header>
 
-    <div class="hero-content">
-
-        <div class="hero-logo">
+        <div class="logo">
             <img src="logo.png" alt="BMS Agency">
         </div>
 
-        <p class="hero-tagline">
-            DIGITAL MARKETING & PERFORMANCE
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#why">Pourquoi BMS</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-logo">
+                <img src="logo.png" alt="BMS Agency">
+            </div>
+
+            <p class="hero-tagline">
+                DIGITAL MARKETING & PERFORMANCE
+            </p>
+
+            <h1>
+                Transformez votre présence digitale
+                <span>en résultats.</span>
+            </h1>
+
+            <p class="hero-description">
+                BMS Agency accompagne les entreprises avec des stratégies
+                digitales personnalisées, basées sur les données et orientées résultats.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#services" class="btn">
+                    Nos services
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contactez-nous
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <p class="section-tag">
+            NOS EXPERTISES
         </p>
 
-        <h1>
-            Transformez votre présence digitale
-            <span>en résultats.</span>
-        </h1>
+        <h2>
+            Des solutions digitales
+            <br>
+            <span>pensées pour vos résultats.</span>
+        </h2>
 
-        <p class="hero-description">
-            BMS Agency accompagne les entreprises avec des stratégies
-            digitales personnalisées, basées sur les données et orientées résultats.
+        <p class="section-description">
+            Nous créons et pilotons des stratégies digitales adaptées
+            à vos objectifs pour développer votre visibilité et vos performances.
         </p>
 
-        <div class="hero-buttons">
-            <a href="#services" class="btn">Nos services</a>
-            <a href="#contact" class="btn btn-outline">Contactez-nous</a>
-        </div>
+        <div class="cards">
 
-    </div>
+            <div class="card">
 
-</section>
+                <div class="card-number">
+                    01
+                </div>
 
-<section class="services" id="services">
-    <h2>Nos Services</h2>
+                <h3>
+                    Publicité Digitale
+                </h3>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Publicité Digitale</h3>
-            <p>
-                Création et gestion de campagnes publicitaires
-                performantes sur les réseaux sociaux.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Stratégie Marketing</h3>
-            <p>
-                Des stratégies adaptées aux objectifs et au marché
-                de chaque entreprise.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Création de Contenu</h3>
-            <p>
-                Contenus visuels et créatifs pour renforcer votre
-                présence digitale.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section class="services" id="services">
-
-    <p class="section-tag">NOS EXPERTISES</p>
-
-    <h2>Des solutions digitales<br><span>pensées pour vos résultats.</span></h2>
-
-    <p class="section-description">
-        Nous créons et pilotons des stratégies digitales adaptées
-        à vos objectifs pour développer votre visibilité et vos performances.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="card-number">01</div>
-            <h3>Publicité Digitale</h3>
-            <p>
-                Création, lancement et optimisation de campagnes
-                publicitaires pour atteindre les bonnes personnes
-                au bon moment.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="card-number">02</div>
-            <h3>Stratégie Marketing</h3>
-            <p>
-                Analyse de votre marché, de votre audience et de vos
-                objectifs afin de construire une stratégie adaptée.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="card-number">03</div>
-            <h3>Création de Contenu</h3>
-            <p>
-                Des contenus créatifs et professionnels pour renforcer
-                votre image et votre présence sur les réseaux sociaux.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-    <section class="why-bms">
-
-    <div class="why-content">
-
-        <div class="why-text">
-            <p class="section-tag">POURQUOI BMS ?</p>
-
-            <h2>
-                Pas seulement de la visibilité.
-                <span>Des résultats.</span>
-            </h2>
-
-            <p>
-                Chez BMS Agency, chaque décision est basée sur les données,
-                chaque campagne a un objectif et chaque investissement doit
-                avoir du sens.
-            </p>
-
-            <a href="#contact" class="btn">
-                Parlons de votre projet
-            </a>
-        </div>
-
-        <div class="why-cards">
-
-            <div class="why-card">
-                <span>01</span>
-                <h3>Results First</h3>
                 <p>
-                    Nous nous concentrons sur les objectifs réels
-                    de votre entreprise.
+                    Création, lancement et optimisation de campagnes
+                    publicitaires pour atteindre les bonnes personnes
+                    au bon moment.
                 </p>
+
             </div>
 
-            <div class="why-card">
-                <span>02</span>
-                <h3>Data Driven</h3>
+
+            <div class="card">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    Stratégie Marketing
+                </h3>
+
                 <p>
-                    Les décisions sont basées sur les données
-                    et les performances des campagnes.
+                    Analyse de votre marché, de votre audience et de vos
+                    objectifs afin de construire une stratégie adaptée.
                 </p>
+
             </div>
 
-            <div class="why-card">
-                <span>03</span>
-                <h3>ROI</h3>
-                <p>
-                    Chaque investissement publicitaire doit être
-                    suivi et analysé.
-                </p>
-            </div>
 
-            <div class="why-card">
-                <span>04</span>
-                <h3>Accompagnement</h3>
+            <div class="card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    Création de Contenu
+                </h3>
+
                 <p>
-                    Nous travaillons avec nos clients comme
-                    de véritables partenaires.
+                    Des contenus créatifs et professionnels pour renforcer
+                    votre image et votre présence sur les réseaux sociaux.
                 </p>
+
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-<footer>
-    © 2026 BMS Agency — Digital Marketing & Performance
-</footer>
+
+    <!-- ================= WHY BMS ================= -->
+
+    <section class="why-bms" id="why">
+
+        <div class="why-content">
+
+            <div class="why-text">
+
+                <p class="section-tag">
+                    POURQUOI BMS ?
+                </p>
+
+                <h2>
+                    Pas seulement de la visibilité.
+                    <span>Des résultats.</span>
+                </h2>
+
+                <p>
+                    Chez BMS Agency, chaque décision est basée sur les données,
+                    chaque campagne a un objectif et chaque investissement doit
+                    avoir du sens.
+                </p>
+
+                <a href="#contact" class="btn">
+                    Parlons de votre projet
+                </a>
+
+            </div>
+
+
+            <div class="why-cards">
+
+                <div class="why-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        Results First
+                    </h3>
+
+                    <p>
+                        Nous nous concentrons sur les objectifs réels
+                        de votre entreprise.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Data Driven
+                    </h3>
+
+                    <p>
+                        Les décisions sont basées sur les données
+                        et les performances des campagnes.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        ROI
+                    </h3>
+
+                    <p>
+                        Chaque investissement publicitaire doit être
+                        suivi et analysé.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <span>04</span>
+
+                    <h3>
+                        Accompagnement
+                    </h3>
+
+                    <p>
+                        Nous travaillons avec nos clients comme
+                        de véritables partenaires.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <p class="section-tag">
+            CONTACT
+        </p>
+
+        <h2>
+            Prêt à développer
+            <span>votre activité ?</span>
+        </h2>
+
+        <p>
+            Parlons de vos objectifs et construisons ensemble
+            votre stratégie digitale.
+        </p>
+
+        <a href="mailto:contact@bms-agency.com" class="btn">
+            Contactez BMS Agency
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        © 2026 BMS Agency — Digital Marketing & Performance
+    </footer>
+
 
 </body>
 </html>
