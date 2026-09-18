@@ -130,38 +130,74 @@
 }
 
         .services {
-            padding: 70px 8%;
-            text-align: center;
-        }
+    padding: 100px 8%;
+    text-align: center;
+    background: #0f0f15;
+}
 
-        .services h2 {
-            font-size: 35px;
-            margin-bottom: 40px;
-        }
+.section-tag {
+    color: #9b5cff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
 
-        .cards {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+.services h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
 
-        .card {
-            background: #15151d;
-            padding: 30px;
-            border-radius: 12px;
-            width: 280px;
-        }
+.services h2 span {
+    color: #9b5cff;
+}
 
-        .card h3 {
-            color: #9b5cff;
-            margin-bottom: 15px;
-        }
+.section-description {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    color: #999;
+    line-height: 1.7;
+}
 
-        .card p {
-            color: #aaa;
-            line-height: 1.5;
-        }
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 35px 30px;
+    text-align: left;
+    background: #15151d;
+    border: 1px solid #24242d;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #9b5cff;
+}
+
+.card-number {
+    color: #9b5cff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #999;
+    line-height: 1.7;
+}
 
         footer {
             text-align: center;
@@ -198,6 +234,20 @@
     }
 }
     </style>
+    @media (max-width: 600px) {
+
+    .services {
+        padding: 70px 20px;
+    }
+
+    .services h2 {
+        font-size: 32px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
 </head>
 
 <body>
@@ -276,18 +326,50 @@
     </div>
 </section>
 
-<section class="services" id="contact">
-    <h2>Contactez BMS Agency</h2>
+<section class="services" id="services">
 
-    <p style="color:#aaa; margin-bottom:25px;">
-        Transformons votre présence digitale en résultats.
+    <p class="section-tag">NOS EXPERTISES</p>
+
+    <h2>Des solutions digitales<br><span>pensées pour vos résultats.</span></h2>
+
+    <p class="section-description">
+        Nous créons et pilotons des stratégies digitales adaptées
+        à vos objectifs pour développer votre visibilité et vos performances.
     </p>
 
-    <a href="mailto:contact@bms-agency.com" class="btn">
-        Nous contacter
-    </a>
-</section>
+    <div class="cards">
 
+        <div class="card">
+            <div class="card-number">01</div>
+            <h3>Publicité Digitale</h3>
+            <p>
+                Création, lancement et optimisation de campagnes
+                publicitaires pour atteindre les bonnes personnes
+                au bon moment.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">02</div>
+            <h3>Stratégie Marketing</h3>
+            <p>
+                Analyse de votre marché, de votre audience et de vos
+                objectifs afin de construire une stratégie adaptée.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">03</div>
+            <h3>Création de Contenu</h3>
+            <p>
+                Des contenus créatifs et professionnels pour renforcer
+                votre image et votre présence sur les réseaux sociaux.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 <footer>
     © 2026 BMS Agency — Digital Marketing & Performance
 </footer>
