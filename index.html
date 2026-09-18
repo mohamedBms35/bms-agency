@@ -248,6 +248,95 @@
         width: 100%;
     }
 }
+    .why-bms {
+    padding: 110px 8%;
+    background: #0b0b0f;
+}
+
+.why-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.why-text {
+    flex: 1;
+}
+
+.why-text h2 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.why-text h2 span {
+    color: #9b5cff;
+}
+
+.why-text > p:not(.section-tag) {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.why-cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.why-card {
+    padding: 28px;
+    background: #15151d;
+    border: 1px solid #24242d;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    border-color: #9b5cff;
+}
+
+.why-card span {
+    color: #9b5cff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.why-card h3 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+
+.why-card p {
+    color: #888;
+    line-height: 1.6;
+    font-size: 14px;
+}
+    @media (max-width: 700px) {
+
+    .why-bms {
+        padding: 75px 20px;
+    }
+
+    .why-content {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .why-text h2 {
+        font-size: 32px;
+    }
+
+    .why-cards {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
 </head>
 
 <body>
@@ -365,6 +454,72 @@
                 Des contenus créatifs et professionnels pour renforcer
                 votre image et votre présence sur les réseaux sociaux.
             </p>
+        </div>
+
+    </div>
+
+</section>
+    <section class="why-bms">
+
+    <div class="why-content">
+
+        <div class="why-text">
+            <p class="section-tag">POURQUOI BMS ?</p>
+
+            <h2>
+                Pas seulement de la visibilité.
+                <span>Des résultats.</span>
+            </h2>
+
+            <p>
+                Chez BMS Agency, chaque décision est basée sur les données,
+                chaque campagne a un objectif et chaque investissement doit
+                avoir du sens.
+            </p>
+
+            <a href="#contact" class="btn">
+                Parlons de votre projet
+            </a>
+        </div>
+
+        <div class="why-cards">
+
+            <div class="why-card">
+                <span>01</span>
+                <h3>Results First</h3>
+                <p>
+                    Nous nous concentrons sur les objectifs réels
+                    de votre entreprise.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <span>02</span>
+                <h3>Data Driven</h3>
+                <p>
+                    Les décisions sont basées sur les données
+                    et les performances des campagnes.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <span>03</span>
+                <h3>ROI</h3>
+                <p>
+                    Chaque investissement publicitaire doit être
+                    suivi et analysé.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <span>04</span>
+                <h3>Accompagnement</h3>
+                <p>
+                    Nous travaillons avec nos clients comme
+                    de véritables partenaires.
+                </p>
+            </div>
+
         </div>
 
     </div>
