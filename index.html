@@ -36,42 +36,98 @@
             margin-left: 25px;
         }
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+       .hero {
+    min-height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 20px;
-        }
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #7c3aed;
+    opacity: 0.12;
+    filter: blur(120px);
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-        .hero h1 span {
-            color: #9b5cff;
-        }
+.hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
 
-        .hero p {
-            max-width: 650px;
-            color: #bbb;
-            font-size: 19px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+.hero-logo img {
+    width: 180px;
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 25px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #9b5cff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+.hero-tagline {
+    color: #9b5cff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #9b5cff;
+    display: block;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #9b5cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #9b5cff;
+}
 
         .services {
             padding: 70px 8%;
@@ -113,6 +169,34 @@
             color: #777;
             border-top: 1px solid #222;
         }
+        @media (max-width: 600px) {
+
+    .hero {
+        min-height: 75vh;
+        padding: 50px 20px;
+    }
+
+    .hero-logo img {
+        width: 140px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 220px;
+    }
+}
     </style>
 </head>
 
@@ -130,14 +214,34 @@
 </header>
 
 <section class="hero">
-    <h1>Digital Marketing <span>Agency</span></h1>
 
-    <p>
-        BMS Agency accompagne les entreprises dans leur transformation
-        digitale grâce à des stratégies marketing basées sur les résultats.
-    </p>
+    <div class="hero-content">
 
-    <a href="#contact" class="btn">Contactez-nous</a>
+        <div class="hero-logo">
+            <img src="logo.png" alt="BMS Agency">
+        </div>
+
+        <p class="hero-tagline">
+            DIGITAL MARKETING & PERFORMANCE
+        </p>
+
+        <h1>
+            Transformez votre présence digitale
+            <span>en résultats.</span>
+        </h1>
+
+        <p class="hero-description">
+            BMS Agency accompagne les entreprises avec des stratégies
+            digitales personnalisées, basées sur les données et orientées résultats.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="btn">Nos services</a>
+            <a href="#contact" class="btn btn-outline">Contactez-nous</a>
+        </div>
+
+    </div>
+
 </section>
 
 <section class="services" id="services">
