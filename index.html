@@ -7,7 +7,6 @@
     <title>BMS Agency | Digital Marketing & Performance</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -23,8 +22,6 @@
             background: #0b0b0f;
             color: white;
         }
-
-        /* ================= HEADER ================= */
 
         header {
             width: 100%;
@@ -58,9 +55,6 @@
         nav a:hover {
             color: #9b5cff;
         }
-
-
-        /* ================= HERO ================= */
 
         .hero {
             min-height: 82vh;
@@ -100,7 +94,8 @@
             margin-bottom: 25px;
         }
 
-        .hero-tagline {
+        .hero-tagline,
+        .section-tag {
             color: #9b5cff;
             font-size: 13px;
             font-weight: bold;
@@ -155,21 +150,10 @@
             border: 1px solid #9b5cff;
         }
 
-
-        /* ================= SERVICES ================= */
-
         .services {
             padding: 100px 8%;
             text-align: center;
             background: #0f0f15;
-        }
-
-        .section-tag {
-            color: #9b5cff;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 18px;
         }
 
         .services h2 {
@@ -178,7 +162,9 @@
             margin-bottom: 20px;
         }
 
-        .services h2 span {
+        .services h2 span,
+        .why-text h2 span,
+        .contact h2 span {
             color: #9b5cff;
         }
 
@@ -228,9 +214,6 @@
             line-height: 1.7;
         }
 
-
-        /* ================= WHY BMS ================= */
-
         .why-bms {
             padding: 110px 8%;
             background: #0b0b0f;
@@ -252,10 +235,6 @@
             font-size: 43px;
             line-height: 1.2;
             margin-bottom: 25px;
-        }
-
-        .why-text h2 span {
-            color: #9b5cff;
         }
 
         .why-text > p:not(.section-tag) {
@@ -301,9 +280,6 @@
             font-size: 14px;
         }
 
-
-        /* ================= CONTACT ================= */
-
         .contact {
             padding: 100px 20px;
             text-align: center;
@@ -315,18 +291,11 @@
             margin-bottom: 20px;
         }
 
-        .contact h2 span {
-            color: #9b5cff;
-        }
-
         .contact p {
             color: #999;
             margin-bottom: 30px;
             line-height: 1.7;
         }
-
-
-        /* ================= FOOTER ================= */
 
         footer {
             text-align: center;
@@ -336,8 +305,50 @@
             background: #0b0b0f;
         }
 
+        /* SOCIAL BUTTONS */
 
-        /* ================= MOBILE ================= */
+        .social-buttons {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .instagram-btn {
+            background: #9b5cff;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .social-icon {
+            width: 21px;
+            height: 21px;
+            flex-shrink: 0;
+        }
 
         @media (max-width: 700px) {
 
@@ -420,76 +431,23 @@
             .contact h2 {
                 font-size: 32px;
             }
+
+            .social-buttons {
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .social-btn {
+                padding: 11px 16px;
+                font-size: 14px;
+            }
         }
-/* ================= WHATSAPP BUTTON ================= */
-
-.whatsapp-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 999;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    padding: 15px 22px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-    transition: 0.3s;
-    
-}
-        .whatsapp-icon {
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.whatsapp-button:hover {
-    transform: translateY(-5px);
-}
     </style>
 </head>
-<style>
-.instagram-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #6c2bd9;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    .whatsapp-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #25D366;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-}
 
-.instagram-icon {
-    width: 20px;
-    height: 20px;
-}
-</style>
 <body>
 
-
-    <!-- ================= HEADER ================= -->
-
     <header>
-
         <div class="logo">
             <img src="logo.png" alt="BMS Agency">
         </div>
@@ -499,14 +457,9 @@
             <a href="#why">Pourquoi BMS</a>
             <a href="#contact">Contact</a>
         </nav>
-
     </header>
 
-
-    <!-- ================= HERO ================= -->
-
     <section class="hero">
-
         <div class="hero-content">
 
             <div class="hero-logo">
@@ -528,7 +481,6 @@
             </p>
 
             <div class="hero-buttons">
-
                 <a href="#services" class="btn">
                     Nos services
                 </a>
@@ -536,21 +488,14 @@
                 <a href="#contact" class="btn btn-outline">
                     Contactez-nous
                 </a>
-
             </div>
 
         </div>
-
     </section>
-
-
-    <!-- ================= SERVICES ================= -->
 
     <section class="services" id="services">
 
-        <p class="section-tag">
-            NOS EXPERTISES
-        </p>
+        <p class="section-tag">NOS EXPERTISES</p>
 
         <h2>
             Des solutions digitales
@@ -566,65 +511,41 @@
         <div class="cards">
 
             <div class="card">
+                <div class="card-number">01</div>
 
-                <div class="card-number">
-                    01
-                </div>
-
-                <h3>
-                    Publicité Digitale
-                </h3>
+                <h3>Publicité Digitale</h3>
 
                 <p>
                     Création, lancement et optimisation de campagnes
                     publicitaires pour atteindre les bonnes personnes
                     au bon moment.
                 </p>
-
             </div>
 
-
             <div class="card">
+                <div class="card-number">02</div>
 
-                <div class="card-number">
-                    02
-                </div>
-
-                <h3>
-                    Stratégie Marketing
-                </h3>
+                <h3>Stratégie Marketing</h3>
 
                 <p>
                     Analyse de votre marché, de votre audience et de vos
                     objectifs afin de construire une stratégie adaptée.
                 </p>
-
             </div>
 
-
             <div class="card">
+                <div class="card-number">03</div>
 
-                <div class="card-number">
-                    03
-                </div>
-
-                <h3>
-                    Création de Contenu
-                </h3>
+                <h3>Création de Contenu</h3>
 
                 <p>
                     Des contenus créatifs et professionnels pour renforcer
                     votre image et votre présence sur les réseaux sociaux.
                 </p>
-
             </div>
 
         </div>
-
     </section>
-
-
-    <!-- ================= WHY BMS ================= -->
 
     <section class="why-bms" id="why">
 
@@ -632,9 +553,7 @@
 
             <div class="why-text">
 
-                <p class="section-tag">
-                    POURQUOI BMS ?
-                </p>
+                <p class="section-tag">POURQUOI BMS ?</p>
 
                 <h2>
                     Pas seulement de la visibilité.
@@ -653,86 +572,51 @@
 
             </div>
 
-
             <div class="why-cards">
 
                 <div class="why-card">
-
                     <span>01</span>
-
-                    <h3>
-                        Results First
-                    </h3>
-
+                    <h3>Results First</h3>
                     <p>
                         Nous nous concentrons sur les objectifs réels
                         de votre entreprise.
                     </p>
-
                 </div>
 
-
                 <div class="why-card">
-
                     <span>02</span>
-
-                    <h3>
-                        Data Driven
-                    </h3>
-
+                    <h3>Data Driven</h3>
                     <p>
                         Les décisions sont basées sur les données
                         et les performances des campagnes.
                     </p>
-
                 </div>
 
-
                 <div class="why-card">
-
                     <span>03</span>
-
-                    <h3>
-                        ROI
-                    </h3>
-
+                    <h3>ROI</h3>
                     <p>
                         Chaque investissement publicitaire doit être
                         suivi et analysé.
                     </p>
-
                 </div>
 
-
                 <div class="why-card">
-
                     <span>04</span>
-
-                    <h3>
-                        Accompagnement
-                    </h3>
-
+                    <h3>Accompagnement</h3>
                     <p>
                         Nous travaillons avec nos clients comme
                         de véritables partenaires.
                     </p>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- ================= CONTACT ================= -->
 
     <section class="contact" id="contact">
 
-        <p class="section-tag">
-            CONTACT
-        </p>
+        <p class="section-tag">CONTACT</p>
 
         <h2>
             Prêt à développer
@@ -750,27 +634,57 @@
 
     </section>
 
-
-    <!-- ================= FOOTER ================= -->
-
     <footer>
         © 2026 BMS Agency — Digital Marketing & Performance
     </footer>
 
 
-<!-- WhatsApp Button -->
-<a href="https://www.instagram.com/bms_agency_/" target="_blank" class="instagram-btn">
-    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-        <circle cx="12" cy="12" r="4"></circle>
-        <circle cx="17.5" cy="6.5" r="1"></circle>
-    </svg>
-    Instagram
-  <a href="https://wa.me/213666681140" target="_blank" class="whatsapp-btn">
-    <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor" d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.08-1.12l-.29-.17-3.07.8.82-2.99-.19-.31A8 8 0 1 1 12 20zm4.35-5.98c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.21-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.16.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
-    </svg>
-    WhatsApp
-</a>
+    <!-- SOCIAL BUTTONS -->
 
+    <div class="social-buttons">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/bms_agency_/"
+           target="_blank"
+           class="social-btn instagram-btn"
+           aria-label="Instagram BMS Agency">
+
+            <svg class="social-icon" viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
+                <rect x="3" y="3"
+                      width="18" height="18"
+                      rx="5"></rect>
+
+                <circle cx="12" cy="12" r="4"></circle>
+
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+
+            </svg>
+
+            Instagram
+        </a>
+
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/213666681140"
+           target="_blank"
+           class="social-btn whatsapp-btn"
+           aria-label="WhatsApp BMS Agency">
+
+            <svg class="social-icon"
+                 viewBox="0 0 24 24"
+                 fill="currentColor">
+
+                <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.08-1.12l-.29-.17-3.07.8.82-2.99-.19-.31A8 8 0 1 1 12 20zm4.35-5.98c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.21-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+            </svg>
+
+            WhatsApp
+        </a>
+
+    </div>
+
+</body>
 </html>
